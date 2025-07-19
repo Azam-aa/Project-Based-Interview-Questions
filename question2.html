@@ -4,3 +4,29 @@ How can you change the background color of a button and also scale it up
 slightly when a user hovers over it, but return it to its original state when the
 hover ends
  -->
+
+<!-- 
+ Ans : we can use the hover pseudo-class in CSS to change the background color and scale of a button when hovered.
+  The scale property will increase the size when we hover.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question2</title>
+    <style>
+      .btn {
+        width: 150px;
+        height: 100px;
+      }
+      .btn:hover {
+        background-color: lightblue;
+        scale: 1.1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Click here</button>
+  </body>
+</html>
