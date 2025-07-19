@@ -3,3 +3,44 @@
 How can you create a CSS effect where an underline appears under a link
 when hovered, starting from the center and expanding outwards!
  -->
+
+<!-- 
+ Ans : we can use the `::after` pseudo-element to create an underline that expands from the center when we hover on it.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question3</title>
+    <style>
+      a {
+        text-decoration: none;
+        position: relative;
+        color: black;
+      }
+ 
+     a::after {
+        content: '';
+        position: absolute;
+        left: 50%; 
+        bottom: 0; 
+        width: 0;
+        height: 3px;
+        background-color: black;
+        transition: left 0.3s ease, width 0.3s ease;
+      }
+
+      a:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <a href="www.google.com">Google</a>
+  </body>
+</html>
